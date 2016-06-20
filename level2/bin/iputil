@@ -1,0 +1,20 @@
+#!/bin/bash
+
+CWD=$( cd "$( dirname "${BASH_SOURCE[0]}" )/" && pwd )
+cd ${CWD}
+
+source ${CWD}/lib/util.sh
+
+CMD=$(getarg cmd $@)
+
+case ${CMD} in
+    ip)
+        IFACE=$(getarg iface $@)
+        print_ip ${IFACE}
+        ;;
+    publicip)
+        get_public_ip
+        ;;
+    *)
+        echo "Invalid argument"
+esac
