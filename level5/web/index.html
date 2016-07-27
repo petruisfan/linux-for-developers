@@ -1,0 +1,21 @@
+<html>
+<body>
+    <button onclick="getFile()">Click me!</button>
+    <div id="out">
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var getFile = function() {
+            $.ajax({
+              url: "/file",
+              success: function( result ) {
+                $( "#out" ).html( "<strong>" + result + "</strong>" );
+
+              }
+            });
+        }
+    </script>
+</body>
+</html>
