@@ -19,6 +19,7 @@ set incsearch      " show partial matches for a search phrase
 set nopaste
 set number         " show line number
 set undolevels=1000
+set cursorline
 
 " Always show the status line
 set laststatus=2
