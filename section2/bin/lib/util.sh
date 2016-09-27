@@ -11,7 +11,6 @@ function getarg() {
     done
 }   
 
-
 function print_ip() {
     IP=$(
         ifconfig ${1} | \
